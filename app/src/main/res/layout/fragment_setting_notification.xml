@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_background"
+    tools:context=".ui.tab.setting.SettingNotificationFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_notification"
+        android:layout_width="568dp"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_setting_item"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="88dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="31dp"/>
+
+        <TextView
+            android:id="@+id/tv_notification_setting"
+            style="@style/font_500"
+            android:letterSpacing="0.08"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notification_setting"
+            android:textColor="@color/color_primary"
+            android:textSize="28sp"
+            app:layout_constraintTop_toTopOf="@id/iv_back"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back"
+            app:layout_constraintStart_toEndOf="@id/iv_back"
+            android:layout_marginStart="13dp"/>
+
+        <FrameLayout
+            android:layout_width="525dp"
+            android:layout_height="84dp"
+            android:background="@drawable/bg_round_12_ffffff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="23dp">
+
+            <TextView
+                style="@style/font_500"
+                android:letterSpacing="0.1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/push_notification"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="22dp"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sw_notification"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="24dp"
+                android:background="@null"
+                android:button="@drawable/bg_switch"
+                android:thumb="@null"
+                android:track="@null"
+                android:checked="true"/>
+
+
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

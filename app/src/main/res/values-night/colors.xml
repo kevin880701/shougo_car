@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--夜間-->
+
+    <color name="color_primary">@color/black</color>
+    <color name="color_primary_variant">@color/black</color>
+    <color name="color_on_primary">@color/white</color>
+
+    <color name="color_secondary">@color/white</color>
+    <color name="color_secondary_variant">@color/white</color>
+    <color name="color_on_secondary">@color/black</color>
+
+    <color name="color_background">#232f3d</color>
+    <color name="color_on_background">#efefef</color>
+
+    <color name="color_status_bar">#3e3b3a</color>
+
+
+    <color name="color_top_menu_tint">#efefef</color>
+
+    <color name="color_tab_text">#005398</color>
+
+    <color name="color_rv_thumb">#000000</color>
+    <color name="color_rv_track">@color/white</color>
+
+    <color name="color_sv_thumb">#000000</color>
+    <color name="color_sv_track">#efefef</color>
+
+    <color name="color_divider">#c9caca</color>
+
+    <color name="color_normal_text">#3E3A39</color>
+
+    <color name="color_add_travel_background">#000000</color>
+
+    <color name="color_account_text_hint">#787878</color>
+
+    <color name="color_setting_dot">#a6a6a6</color>
+
+    <color name="color_review_privacy_background">#efefef</color>
+
+    <color name="color_favorite_info_title_text">#3E3A39</color>
+    <color name="color_favorite_info_sub_text">#606060</color>
+
+    <color name="color_notification_background">#C9FFFFFF</color>
+
+    <color name="color_fav_list_background">#efefef</color>
+    <color name="color_fav_info_background">#efefef</color>
+    <color name="color_fav_info_content_background">#ffffff</color>
+    <color name="color_start_route_background">#000000</color>
+
+    <color name="color_text_drawable">#606060</color>
+</resources>

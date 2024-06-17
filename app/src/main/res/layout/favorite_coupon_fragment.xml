@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:layout_width="1128dp"
+    tools:layout_height="540dp"
+    tools:background="@android:color/black"
+    tools:context=".ui.tab.favorite.coupon.FavoriteCouponFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_list"
+        android:layout_width="684dp"
+        android:layout_height="540dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ll_info"
+        android:background="@drawable/bg_round_12_fav_list_background">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_coupon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="12dp"
+            android:scrollbarThumbVertical="@drawable/bg_rv_thumb"
+            android:scrollbarTrackVertical="@drawable/bg_rv_track"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false"
+            tools:listitem="@layout/listitem_coupon_place"/>
+
+        <FrameLayout
+            android:id="@+id/fl_filter_city"
+            android:layout_width="300dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_round_ffffff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/fl_filter_category"
+            android:layout_marginTop="35dp">
+
+            <TextView
+                style="@style/font_500"
+                android:letterSpacing="0.1"
+                android:id="@+id/tv_filter_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/all"
+                android:textSize="28sp"
+                android:layout_gravity="center_vertical|start"
+                android:textColor="@color/black"
+                android:layout_marginStart="21dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_triangle_down"
+                android:layout_marginEnd="27dp"
+                android:layout_gravity="center_vertical|end"
+                app:tint="@color/black" />
+
+        </FrameLayout>
+
+        <com.clockworkorange.shou.ui.custom.CustomSpinnerContent
+            android:id="@+id/view_filter_city_content"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:elevation="20dp"
+            android:outlineProvider="bounds"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/fl_filter_city"
+            app:layout_constraintEnd_toEndOf="@id/fl_filter_city"
+            app:layout_constraintTop_toTopOf="@id/fl_filter_city"/>
+
+        <FrameLayout
+            android:id="@+id/fl_filter_category"
+            android:layout_width="300dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_round_ffffff"
+            app:layout_constraintStart_toEndOf="@id/fl_filter_city"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="35dp">
+
+            <TextView
+                style="@style/font_500"
+                android:letterSpacing="0.1"
+                android:id="@+id/tv_filter_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/all"
+                android:textSize="28sp"
+                android:layout_gravity="center_vertical|start"
+                android:textColor="@color/black"
+                android:layout_marginStart="21dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_triangle_down"
+                android:layout_marginEnd="27dp"
+                android:layout_gravity="center_vertical|end"
+                app:tint="@color/black" />
+
+        </FrameLayout>
+
+        <com.clockworkorange.shou.ui.custom.CustomSpinnerContent
+            android:id="@+id/view_filter_category_content"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:elevation="20dp"
+            android:outlineProvider="bounds"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/fl_filter_category"
+            app:layout_constraintEnd_toEndOf="@id/fl_filter_category"
+            app:layout_constraintTop_toTopOf="@id/fl_filter_category"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_info"
+        android:layout_width="428dp"
+        android:layout_height="540dp"
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cl_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/bg_round_12_fav_info_background">
+
+        <FrameLayout
+            android:id="@+id/fl_top_info"
+            android:layout_width="408dp"
+            android:layout_height="316dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_round_12_fav_content_background">
+
+            <ScrollView
+                android:id="@+id/sv_top_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadeScrollbars="false"
+                android:paddingEnd="15dp"
+                android:paddingTop="20dp"
+                android:scrollbarThumbVertical="@drawable/bg_sv_thumb"
+                android:scrollbarTrackVertical="@drawable/bg_sv_track">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp">
+
+                    <TextView
+                        style="@style/font_500"
+                        android:letterSpacing="0.08"
+                        android:id="@+id/tv_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/coupon_info"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_favorite_info_title_text"
+                        android:textSize="28sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view_underline"
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:background="@color/color_normal_text"
+                        app:layout_constraintStart_toStartOf="@id/tv_discount"
+                        app:layout_constraintEnd_toEndOf="@id/tv_discount"
+                        app:layout_constraintTop_toBottomOf="@id/tv_discount"/>
+
+                    <TextView
+                        style="@style/font_400"
+                        android:letterSpacing="0.08"
+                        android:id="@+id/tv_address"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        tools:text="台南市安平區國勝路82號台南市安平區國勝路82號台南市安平區國勝路82號台南市安平區國勝路82號"
+                        android:textColor="@color/color_favorite_info_sub_text"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="@id/tv_discount"
+                        app:layout_constraintTop_toBottomOf="@id/tv_discount"
+                        app:layout_constraintEnd_toStartOf="@id/tv_distance"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+                    <TextView
+                        style="@style/font_400"
+                        android:letterSpacing="0.08"
+                        android:id="@+id/tv_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text=" 1.5公里"
+                        android:drawableStart="@drawable/ic_arrow_right_up"
+                        android:textColor="@color/color_favorite_info_sub_text"
+                        android:textSize="20sp"
+                        app:layout_constraintTop_toTopOf="@id/tv_address"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_address"
+                        app:layout_constraintStart_toEndOf="@id/tv_address"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="12dp"/>
+
+                    <TextView
+                        style="@style/font_500"
+                        android:letterSpacing="0.08"
+                        android:id="@+id/tv_date_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/activity_date"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_normal_text"
+                        android:textSize="26sp"
+                        app:layout_constraintStart_toStartOf="@id/tv_discount"
+                        app:layout_constraintTop_toBottomOf="@id/tv_address"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        style="@style/font_400"
+                        android:letterSpacing="0.08"
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="2019.7.30-2019.8.30"
+                        android:textColor="@color/color_favorite_info_sub_text"
+                        android:textSize="24sp"
+                        app:layout_constraintStart_toStartOf="@id/tv_discount"
+                        app:layout_constraintTop_toBottomOf="@id/tv_date_title"
+                        android:layout_marginTop="2dp"/>
+
+                    <TextView
+                        style="@style/font_500"
+                        android:letterSpacing="0.08"
+                        android:id="@+id/tv_detail_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/activity_detail"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_normal_text"
+                        android:textSize="26sp"
+                        app:layout_constraintStart_toStartOf="@id/tv_discount"
+                        app:layout_constraintTop_toBottomOf="@id/tv_date"
+                        android:layout_marginTop="19dp"/>
+
+                    <TextView
+                        style="@style/font_400"
+                        android:letterSpacing="0.08"
+                        android:id="@+id/tv_detail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        tools:text="使用此優惠卷享有95折優惠。最低消費＄399; 同一人/帳號限用一次。同一人/帳號限用一次。同一帳號限用一次。"
+                        android:textColor="@color/color_favorite_info_sub_text"
+                        android:textSize="24sp"
+                        app:layout_constraintStart_toStartOf="@id/tv_discount"
+                        app:layout_constraintTop_toBottomOf="@id/tv_detail_title"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="50dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="10dp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_bottom_info"
+            android:layout_width="408dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_round_12_fav_content_background">
+
+            <include
+                android:id="@+id/il_add_travel"
+                layout="@layout/item_add_travel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/il_store_info"
+                app:layout_constraintEnd_toStartOf="@id/fl_qr_code"
+                android:layout_marginBottom="8dp"/>
+
+            <include
+                android:id="@+id/il_store_info"
+                layout="@layout/item_store_info"
+                android:layout_width="204dp"
+                android:layout_height="56dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/fl_qr_code"
+                android:layout_marginBottom="9dp"/>
+
+            <FrameLayout
+                android:id="@+id/fl_qr_code"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_round_3_dcdddd">
+
+                <ImageView
+                    android:id="@+id/iv_qr_code"
+                    android:layout_width="133dp"
+                    android:layout_height="133dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_qr_code"/>
+
+            </FrameLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_touch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_background"
+    tools:context=".ui.tab.main.topmenu.SelectDestFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="輸入你的目的地"
+        android:textColor="@color/color_secondary"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/il_top_menu"
+        app:layout_constraintEnd_toEndOf="@id/il_top_menu"
+        app:layout_constraintTop_toBottomOf="@id/il_top_menu"
+        android:layout_marginTop="83dp"/>
+
+    <FrameLayout
+        android:id="@+id/fl_city"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_category"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/fl_town"
+        app:layout_constraintTop_toBottomOf="@id/il_top_menu"
+        android:layout_marginTop="163dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginEnd="17dp">
+
+        <TextView
+            android:id="@+id/tv_select_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="縣市"
+            android:textSize="28sp"
+            android:layout_gravity="center_vertical|start"
+            android:textColor="@color/black"
+            android:layout_marginStart="34dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_triangle_down"
+            android:layout_marginEnd="32dp"
+            android:layout_gravity="center_vertical|end"
+            app:tint="@color/color_primary" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_town"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/fl_city"
+        app:layout_constraintTop_toTopOf="@id/fl_city">
+
+        <TextView
+            android:id="@+id/tv_select_town"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="區域"
+            android:textSize="28sp"
+            android:layout_gravity="center_vertical|start"
+            android:textColor="@color/black"
+            android:layout_marginStart="34dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_triangle_down"
+            android:layout_marginEnd="32dp"
+            android:layout_gravity="center_vertical|end"
+            app:tint="@color/color_primary" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_address"
+        android:layout_width="577dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_category"
+        app:layout_constraintStart_toStartOf="@id/fl_city"
+        app:layout_constraintEnd_toEndOf="@id/fl_town"
+        app:layout_constraintTop_toBottomOf="@id/fl_city"
+        android:layout_marginTop="30dp">
+
+        <EditText
+            android:id="@+id/et_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="輸入街道及門號"
+            android:inputType="text"
+            android:background="@null"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:paddingStart="34dp"
+            android:textColorHint="@color/color_primary"
+            android:textColor="@color/color_primary"
+            android:textSize="28sp"/>
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fl_search"
+        android:layout_width="104dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_round_c30f23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fl_address"
+        android:layout_marginTop="75dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="14dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜 尋"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/color_secondary"
+            android:textSize="20sp"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_select_city"
+        android:layout_width="280dp"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/fl_city"
+        app:layout_constraintEnd_toEndOf="@id/fl_city"
+        app:layout_constraintTop_toTopOf="@id/fl_city"
+        android:background="@drawable/bg_round_25_efefef"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="縣市"
+                android:layout_gravity="center_vertical|start"
+                android:textSize="28sp"
+                android:textColor="#a6a6a6"
+                android:layout_marginStart="34dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_triangle_down"
+                app:tint="#a6a6a6"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="27dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#a6a6a6"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"/>
+
+        </FrameLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_city_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_select_town"
+        android:layout_width="280dp"
+        android:layout_height="294dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/fl_town"
+        app:layout_constraintEnd_toEndOf="@id/fl_town"
+        app:layout_constraintTop_toTopOf="@id/fl_town"
+        android:background="@drawable/bg_round_25_efefef"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="區域"
+                android:layout_gravity="center_vertical|start"
+                android:textSize="28sp"
+                android:textColor="#a6a6a6"
+                android:layout_marginStart="34dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_triangle_down"
+                app:tint="#a6a6a6"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="27dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#a6a6a6"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"/>
+
+        </FrameLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_town_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/il_top_menu"
+        layout="@layout/item_top_menu"
+        android:layout_width="315dp"
+        android:layout_height="72dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="5dp"/>
+
+    <include
+        android:id="@+id/il_top_menu_content"
+        layout="@layout/item_top_menu_content"
+        android:layout_width="285dp"
+        android:layout_height="136dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_top_menu"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"
+        android:elevation="5dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

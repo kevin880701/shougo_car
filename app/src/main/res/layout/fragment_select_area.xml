@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_background"
+    tools:context=".ui.tab.main.topmenu.SelectAreaFragment">
+
+
+    <FrameLayout
+        android:id="@+id/fl_city"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_category"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_top_menu"
+        android:layout_marginTop="119dp">
+
+        <TextView
+            style="@style/font_500"
+            android:id="@+id/tv_select_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/city"
+            android:textSize="28sp"
+            android:letterSpacing="0.08"
+            android:layout_gravity="center_vertical|start"
+            android:textColor="@color/color_primary"
+            android:layout_marginStart="34dp"/>
+
+        <ImageView
+            android:id="@+id/iv_city_triangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_triangle_down"
+            android:layout_marginEnd="32dp"
+            android:layout_gravity="center_vertical|end"
+            app:tint="@color/color_primary" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_town"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_category"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fl_city"
+        android:layout_marginTop="43dp">
+
+        <TextView
+            style="@style/font_500"
+            android:id="@+id/tv_select_town"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/area"
+            android:textSize="28sp"
+            android:letterSpacing="0.08"
+            android:layout_gravity="center_vertical|start"
+            android:textColor="@color/color_primary"
+            android:layout_marginStart="34dp"/>
+
+        <ImageView
+            android:id="@+id/iv_town_triangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_triangle_down"
+            android:layout_marginEnd="32dp"
+            android:layout_gravity="center_vertical|end"
+            app:tint="@color/color_primary" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_search"
+        android:layout_width="144dp"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_round_c30f23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fl_town"
+        android:layout_marginTop="106dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_search"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="21dp"/>
+
+        <TextView
+            style="@style/font_500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search"
+            android:letterSpacing="0.15"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="28dp"
+            android:textColor="@color/white"
+            android:textSize="24sp"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_select_city"
+        android:layout_width="280dp"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/fl_city"
+        app:layout_constraintEnd_toEndOf="@id/fl_city"
+        app:layout_constraintTop_toTopOf="@id/fl_city"
+        android:background="@drawable/bg_category_content"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                style="@style/font_500"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/city"
+                android:letterSpacing="0.08"
+                android:layout_gravity="center_vertical|start"
+                android:textSize="28sp"
+                android:textColor="#a6a6a6"
+                android:layout_marginStart="34dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_triangle_down"
+                app:tint="#a6a6a6"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="27dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#a6a6a6"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"/>
+
+        </FrameLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_city_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_select_town"
+        android:layout_width="280dp"
+        android:layout_height="294dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/fl_town"
+        app:layout_constraintEnd_toEndOf="@id/fl_town"
+        app:layout_constraintTop_toTopOf="@id/fl_town"
+        android:background="@drawable/bg_category_content"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/area"
+                style="@style/font_500"
+                android:letterSpacing="0.08"
+                android:layout_gravity="center_vertical|start"
+                android:textSize="28sp"
+                android:textColor="#a6a6a6"
+                android:layout_marginStart="34dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_triangle_down"
+                app:tint="#a6a6a6"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="27dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#a6a6a6"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"/>
+
+        </FrameLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_town_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/il_top_menu"
+        layout="@layout/item_top_menu"
+        android:layout_width="315dp"
+        android:layout_height="72dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <include
+        android:id="@+id/il_top_menu_content"
+        layout="@layout/item_top_menu_content"
+        android:layout_width="285dp"
+        android:layout_height="136dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_top_menu"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/view_touch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

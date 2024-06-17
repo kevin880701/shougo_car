@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".ui.login.PrivacyFragment">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/font_500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="83dp"
+        android:text="@string/privacy_term"
+        android:letterSpacing="0.08"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:layout_width="680dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/bg_privacy_container"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="false"
+            android:scrollbarStyle="outsideInset"
+            android:layout_marginTop="11dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="10dp"
+            android:scrollbarThumbVertical="@drawable/bg_rv_track"
+            android:scrollbarTrackVertical="@drawable/bg_rv_thumb"
+            android:verticalScrollbarPosition="right">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.3"
+                style="@style/font_400"
+                android:text="隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私"
+                android:textColor="@color/white"
+                android:letterSpacing="0.08"
+                android:paddingEnd="20dp"
+                android:textSize="24sp" />
+
+        </ScrollView>
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_confirm"
+        style="@style/font_500"
+        android:layout_width="112dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/bg_state_confirm_bt"
+        android:text="@string/confirm"
+        android:letterSpacing="0.15"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/font_400"
+        android:layout_marginTop="16dp"
+        android:text="@string/i_agree_privacy_term"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:letterSpacing="0.08"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_confirm" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

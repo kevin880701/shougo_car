@@ -1,0 +1,72 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.SHOU" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryVariant">@color/color_primary_variant</item>
+        <item name="colorOnPrimary">@color/color_on_primary</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/color_secondary</item>
+        <item name="colorSecondaryVariant">@color/color_secondary_variant</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/color_status_bar</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="FullScreenTheme" parent="Theme.SHOU">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="RoundShape12Theme" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="RoundShape22Theme" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">22dp</item>
+    </style>
+
+    <style name="Widget.App.SettingButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/WhiteButtonOverlay</item>
+        <item name="android:background">@drawable/bg_setting_button</item>
+        <item name="android:textColor">@color/color_normal_text</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="WhiteButtonOverlay">
+        <item name="colorPrimary">@color/white</item>
+    </style>
+
+
+    <style name="Widget.App.FavoriteTabStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">132dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:checkMark">@null</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/color_state_favorite_tab_text</item>
+        <item name="android:background">@drawable/bg_favorite_tab</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/noto_sanstc_medium_500</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+
+    <style name="font_500" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/noto_sanstc_medium_500</item>
+    </style>
+
+    <style name="font_400" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/noto_sanstc_regular_400</item>
+    </style>
+
+</resources>

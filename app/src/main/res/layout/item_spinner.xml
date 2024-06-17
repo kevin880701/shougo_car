@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:layout_width="620dp"
+    tools:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/fl_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_round_ffffff"
+        android:minHeight="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            style="@style/font_500"
+            android:letterSpacing="0.1"
+            android:id="@+id/tv_spinner_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="縣市"
+            android:textSize="28sp"
+            android:layout_gravity="center_vertical|start"
+            android:textColor="@color/black"
+            android:layout_marginStart="21dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_triangle_down"
+            android:layout_marginEnd="27dp"
+            android:layout_gravity="center_vertical|end"
+            app:tint="@color/black" />
+
+    </FrameLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/fl_spinner"
+        app:layout_constraintEnd_toEndOf="@id/fl_spinner"
+        app:layout_constraintTop_toTopOf="@id/fl_spinner"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="16dp"
+        android:outlineProvider="paddedBounds"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ll_select_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/fl_select_content_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="44dp">
+
+                <TextView
+                    style="@style/font_500"
+                    android:id="@+id/tv_select_content_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="縣市"
+                    android:layout_gravity="center_vertical|start"
+                    android:textSize="26sp"
+                    android:letterSpacing="0.1"
+                    android:textColor="#a6a6a6"
+                    android:layout_marginStart="21dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_triangle_down"
+                    app:tint="#a6a6a6"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="27dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#a6a6a6"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="18dp"/>
+
+            </FrameLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/ll_select_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

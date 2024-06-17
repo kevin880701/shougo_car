@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">SHOU GO</string>
+    <string name="agree_location_permission">定位權限同意</string>
+    <string name="agree_location_permission_note_1">當您使用「SHOU GO」APP時，要允許其取用您的位置嗎？</string>
+    <string name="agree_location_permission_note_2">您的目前位置會顯示於地圖並用於路線、附近搜尋結果和估計路程時間。</string>
+    <string name="confirm">確定</string>
+    <string name="i_agree_location_permission">我同意定位權限</string>
+    <string name="privacy_term">隱私權條款</string>
+    <string name="i_agree_privacy_term">我同意隱私權條款</string>
+    <string name="member_login_register">會員登入/註冊</string>
+    <string name="login_step_note">步驟說明：</string>
+    <string name="login_step_1">1.下載手機版SHOU GO APP</string>
+    <string name="login_step_2">2.開啟手機版APP後，請點選「我的帳號」  再點選「車機登入」</string>
+    <string name="login_step_3">3.點選「車機登入」出現掃描方框後，  請掃描車機螢幕左側QR CODE</string>
+    <string name="not_login">暫不登入</string>
+    <string name="use_some_function">可以試用部分功能</string>
+    <string name="check_more_coupon">查看更多優惠</string>
+    <string name="this_area_has_no_coupon">此區域尚未有優惠店家</string>
+    <string name="check_more_place">查看更多景點</string>
+    <string name="not_other_coupon">尚未有其他推薦優惠</string>
+    <string name="no_other_place">尚未有其他推薦景點</string>
+    <string name="this_area_has_no_place">此區域尚未有推薦景點</string>
+    <string name="scan_to_phone">掃描儲存至手機</string>
+    <string name="this_feature_reauire_login">＊此功能需要先登入會員＊</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="this_place_has_parking_ad_to_travel">此地點有特約停車場，\n是否將停車場同時加到旅程中？</string>
+    <string name="rember_delete_place">＊請注意：記得刪除已到訪過的地點＊</string>
+    <string name="my_travel">我的旅程</string>
+    <string name="travel_waypoint">自訂旅程的停靠站</string>
+    <string name="start_navigate">開始導航</string>
+    <string name="favorite_travel">收藏旅程</string>
+    <string name="naming_travel">命名此旅程</string>
+    <string name="input_name">輸入名稱</string>
+    <string name="logout_confirm">是否確定登出?</string>
+    <string name="login">登入</string>
+    <string name="logout">登出</string>
+    <string name="not_login_yet">尚未登入</string>
+    <string name="account">帳號</string>
+    <string name="my_account">我的帳號</string>
+    <string name="check">查看</string>
+    <string name="cancel">取消</string>
+    <string name="search">搜尋</string>
+    <string name="city">縣市</string>
+    <string name="area">區域</string>
+    <string name="coupon_store">優惠店家</string>
+    <string name="by_area">依地區推薦</string>
+    <string name="by_location">依位置推薦</string>
+    <string name="by_dest">依目的地推薦</string>
+    <string name="add_travel">加入旅程</string>
+    <string name="favorite">收藏</string>
+    <string name="store_info">店家資訊</string>
+    <string name="coupon">優惠券</string>
+    <string name="store">商店</string>
+    <string name="attraction">景點</string>
+    <string name="travel">旅程</string>
+    <string name="all">全部</string>
+    <string name="coupon_info">優惠資訊</string>
+    <string name="activity_date">活動日期</string>
+    <string name="activity_detail">活動詳情</string>
+    <string name="store_info_2">商店資訊</string>
+    <string name="parking">停車場</string>
+    <string name="info">簡介</string>
+    <string name="require_delete_this_travel">是否確定刪除此旅程？</string>
+    <string name="system_setting">系統設定</string>
+    <string name="notification">通知</string>
+    <string name="privacy_statement">隱私權聲明</string>
+    <string name="notification_setting">通知設定</string>
+    <string name="push_notification">推播通知</string>
+    <string name="no_browser">找不到瀏覽器</string>
+    <string name="no_data">查無資料</string>
+
+    <string-array name="category_city">
+        <item>台中市</item>
+        <item>台北市</item>
+        <item>台東市</item>
+        <item>台南市</item>
+        <item>台西鄉</item>
+    </string-array>
+
+    <string-array name="category_place">
+        <item>餐廳</item>
+        <item>藝文</item>
+        <item>古蹟</item>
+    </string-array>
+
+</resources>

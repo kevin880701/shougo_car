@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6000000"
+    tools:context=".ui.tab.favorite.travel.RequireDeleteTravelFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="560dp"
+        android:layout_height="195dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_round_12_efefef">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/font_500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:letterSpacing="0.08"
+            android:text="@string/require_delete_this_travel"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/il_button_no"
+            layout="@layout/item_button_no"
+            android:layout_width="124dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="26dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/il_button_yes"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <include
+            android:id="@+id/il_button_yes"
+            layout="@layout/item_button_yes"
+            android:layout_width="124dp"
+            android:layout_height="56dp"
+            android:layout_marginBottom="26dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/il_button_no" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="24sp"
+            android:src="@drawable/ic_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

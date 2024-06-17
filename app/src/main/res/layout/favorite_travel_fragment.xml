@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:layout_width="1128dp"
+    tools:layout_height="540dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_list"
+        android:layout_width="684dp"
+        android:layout_height="540dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cl_info"
+        android:background="@drawable/bg_round_12_fav_list_background">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_travel"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="21dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="12dp"
+            android:scrollbarThumbVertical="@drawable/bg_rv_thumb"
+            android:scrollbarTrackVertical="@drawable/bg_rv_track"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false"
+            tools:listitem="@layout/listitem_travel"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_info"
+        android:layout_width="428dp"
+        android:layout_height="540dp"
+        android:layout_gravity="end"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cl_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/bg_round_12_fav_list_background">
+
+        <include
+            android:id="@+id/il_start_route"
+            layout="@layout/item_start_route_daynight"
+            android:layout_width="204dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_waypoint"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/il_start_route"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginTop="30dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            tools:listitem="@layout/listitem_simple_waypoint"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

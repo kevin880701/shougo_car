@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#4D000000">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="560dp"
+        android:layout_height="404dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_round_12_efefef">
+
+        <TextView
+            style="@style/font_500"
+            android:letterSpacing="0.08"
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="34dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="70dp"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="漢來美食 優惠券"
+            android:textColor="@color/color_coupon_list_title_text"
+            android:textSize="28sp"/>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_close"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"/>
+
+        <View
+            android:id="@+id/view_close"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/iv_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/iv_close"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_item"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            android:layout_marginTop="9dp"
+            android:layout_marginStart="63dp"
+            android:layout_marginEnd="38dp"
+            android:layout_marginBottom="10dp"
+            android:scrollbarThumbVertical="@drawable/bg_rv_thumb"
+            android:scrollbarTrackVertical="@drawable/bg_rv_track"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            android:scrollbarStyle="outsideInset"
+            android:paddingRight="10dp"
+            android:fadeScrollbars="false"
+            tools:listitem="@layout/listitem_title"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+</FrameLayout>

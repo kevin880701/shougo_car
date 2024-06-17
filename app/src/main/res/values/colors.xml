@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="color_primary">@color/white</color>
+    <color name="color_primary_variant">@color/white</color>
+    <color name="color_on_primary">@color/black</color>
+
+    <color name="color_secondary">@color/black</color>
+    <color name="color_secondary_variant">@color/black</color>
+    <color name="color_on_secondary">@color/white</color>
+
+    <color name="color_background">#dcdddd</color>
+    <color name="color_on_background">#000000</color>
+
+    <color name="color_status_bar">#000000</color>
+
+    <color name="color_highlight">#C30D23</color>
+    <color name="color_highlight2">#C30F23</color>
+    <color name="color_unhighlight">#a6a6a6</color>
+
+    <color name="color_coupon_text">@color/black</color>
+    <color name="color_coupon_desc_text">#C30F23</color>
+
+    <color name="color_top_menu_tint">@color/color_secondary</color>
+    <color name="color_top_menu_content_divider">#a6a6a6</color>
+
+    <color name="color_tab_text">#005398</color>
+
+    <color name="color_rv_thumb">#595757</color>
+    <color name="color_rv_track">@color/white</color>
+
+    <color name="color_sv_thumb">#595757</color>
+    <color name="color_sv_track">#efefef</color>
+
+
+    <color name="color_divider">#a6a6a6</color>
+
+    <color name="color_normal_text">@color/white</color>
+    <color name="color_add_travel_background">#a6a6a6</color>
+
+    <color name="color_my_travel_title">#3E3A39</color>
+    <color name="color_my_travel_item_title">#4a4a4a</color>
+    <color name="color_my_travel_subtitle">#a6a6a6</color>
+
+    <color name="color_account_text_hint">#ffffff</color>
+
+    <color name="color_setting_dot">@color/white</color>
+
+    <color name="color_review_privacy_background">@color/black</color>
+    <color name="color_favorite_info_title_text">#ffffff</color>
+    <color name="color_favorite_info_sub_text">#dcdddd</color>
+
+    <color name="color_notification_background">#B3000000</color>
+
+    <color name="color_coupon_list_title_text">#3E3A39</color>
+
+    <color name="color_fav_list_background">#000000</color>
+    <color name="color_fav_info_background">#3E3A39</color>
+    <color name="color_fav_info_content_background">#000000</color>
+    <color name="color_start_route_background">#a6a6a6</color>
+
+    <color name="color_text_drawable">#DCDDDD</color>
+</resources>

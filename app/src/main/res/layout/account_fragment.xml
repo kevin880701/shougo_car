@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.tab.account.AccountFragment"
+    android:background="@color/color_background">
+
+    <TextView
+        android:id="@+id/tv_my_account_title"
+        style="@style/font_500"
+        android:letterSpacing="0.08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_account"
+        android:textColor="@color/color_secondary"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="47dp"/>
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_account_bg"
+        android:layout_width="525dp"
+        android:layout_height="84dp"
+        android:background="@color/color_secondary"
+        android:theme="@style/RoundShape12Theme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="125dp"/>
+
+    <TextView
+        android:id="@+id/tv_account_title"
+        style="@style/font_500"
+        android:letterSpacing="0.1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/account"
+        android:textColor="@color/color_normal_text"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="@id/iv_account_bg"
+        app:layout_constraintBottom_toBottomOf="@id/iv_account_bg"
+        app:layout_constraintStart_toStartOf="@id/iv_account_bg"
+        android:layout_marginStart="22dp"/>
+
+    <TextView
+        style="@style/font_400"
+        android:letterSpacing="0.08"
+        android:id="@+id/tv_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/iv_account_bg"
+        app:layout_constraintBottom_toBottomOf="@id/iv_account_bg"
+        app:layout_constraintEnd_toEndOf="@id/iv_account_bg"
+        tools:text="cwo.service@gmail.com"
+        android:textSize="20sp"
+        android:textColor="@color/color_normal_text"
+        android:layout_marginEnd="25dp"
+        android:visibility="invisible"/>
+
+
+    <TextView
+        style="@style/font_500"
+        android:letterSpacing="0.15"
+        android:id="@+id/tv_not_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/iv_account_bg"
+        app:layout_constraintBottom_toBottomOf="@id/iv_account_bg"
+        app:layout_constraintEnd_toEndOf="@id/iv_account_bg"
+        android:text="@string/not_login_yet"
+        android:textSize="20sp"
+        android:textColor="@color/color_account_text_hint"
+        android:layout_marginEnd="25dp"
+        android:visibility="invisible"/>
+
+    <TextView
+        style="@style/font_500"
+        android:letterSpacing="0.15 "
+        android:id="@+id/tv_logout"
+        android:layout_width="112dp"
+        android:layout_height="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_account_bg"
+        android:layout_marginTop="65dp"
+        android:text="@string/logout"
+        android:background="@drawable/bg_logout_button"
+        android:textColor="@color/color_primary"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="112dp"
+        android:layout_height="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_account_bg"
+        android:layout_marginTop="65dp"
+        android:text="@string/login"
+        android:background="@drawable/bg_round_c30f23"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:visibility="invisible"/>
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

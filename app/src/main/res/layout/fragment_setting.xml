@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    tools:context=".ui.tab.setting.SettingFragment">
+
+    <TextView
+        android:id="@+id/tv_system_setting"
+        style="@style/font_500"
+        android:letterSpacing="0.08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/system_setting"
+        android:textColor="@color/color_secondary"
+        android:textSize="28sp"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="47dp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_top_setting"
+        android:layout_width="525dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:orientation="vertical"
+        android:layout_marginTop="125dp">
+
+        <FrameLayout
+            android:id="@+id/fl_notification"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:background="@drawable/bg_setting_item"
+            android:foreground="?attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/tv_notification"
+                style="@style/font_500"
+                android:letterSpacing="0.1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="25dp"
+                android:gravity="start|center_vertical"
+                android:text="@string/notification"
+                android:textColor="@color/color_normal_text"
+                android:textSize="26sp" />
+
+            <ImageView
+                android:id="@+id/iv_notification_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/ic_three_dot" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_privacy"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_setting_item"
+            android:foreground="?attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/tv_privacy"
+                style="@style/font_500"
+                android:letterSpacing="0.1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="25dp"
+                android:gravity="start|center_vertical"
+                android:text="@string/privacy_statement"
+                android:textColor="@color/color_normal_text"
+                android:textSize="26sp" />
+
+            <ImageView
+                android:id="@+id/iv_privacy_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/ic_three_dot"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/font_400"
+        android:letterSpacing="0.08"
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="目前版本 Version 0.00.0"
+        android:textSize="24sp"
+        android:textColor="#787878"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="40dp"/>
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="22dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_width="300dp">
+
+    <LinearLayout
+        android:id="@+id/ll_select_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fl_select_content_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="44dp">
+
+            <TextView
+                style="@style/font_500"
+                android:letterSpacing="0.1"
+                android:id="@+id/tv_select_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginStart="21dp"
+                android:text="全部"
+                android:textColor="#a6a6a6"
+                android:textSize="28sp" />
+
+            <ImageView
+                app:tint="#a6a6a6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="27dp"
+                android:src="@drawable/ic_triangle_down" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:background="#a6a6a6" />
+
+        </FrameLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_select_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

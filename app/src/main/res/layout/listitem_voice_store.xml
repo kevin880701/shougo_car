@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="620dp"
+    android:layout_height="84dp"
+    tools:background="@color/color_background">
+
+    <View
+        android:id="@+id/view_bg"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:background="@drawable/bg_round_8_ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/iv_logo"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:round="8dp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/font_500"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:ellipsize="end"
+        android:letterSpacing="0.08"
+        android:textColor="@color/color_coupon_text"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ll_dot"
+        app:layout_constraintStart_toEndOf="@id/iv_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="漢來美食" />
+
+    <LinearLayout
+        android:id="@+id/ll_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/view_bg"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/drawable_dot" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/drawable_dot" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/drawable_dot" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

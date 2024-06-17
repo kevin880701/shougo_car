@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".ui.tab.main.MainTabFragment">
+
+    <fragment
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/map_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/ll_coupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="52dp">
+
+        <include
+            android:id="@+id/il_coupon_1"
+            layout="@layout/item_coupon"
+            android:layout_width="368dp"
+            android:layout_height="88dp"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <include
+            android:id="@+id/il_coupon_2"
+            layout="@layout/item_coupon"
+            android:layout_width="368dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <include
+            android:id="@+id/il_coupon_3"
+            layout="@layout/item_coupon"
+            android:layout_width="368dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <include
+            android:id="@+id/il_coupon_more"
+            layout="@layout/item_store_coupon_more"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <include
+            android:id="@+id/il_no_other_coupon"
+            layout="@layout/item_no_other_coupon"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="67dp">
+
+        <include
+            android:id="@+id/il_place_1"
+            layout="@layout/item_place"
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <include
+            android:id="@+id/il_place_2"
+            layout="@layout/item_place"
+            android:layout_width="368dp"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <include
+            android:id="@+id/il_place_3"
+            layout="@layout/item_place"
+            android:layout_width="368dp"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <include
+            android:id="@+id/il_place_more"
+            layout="@layout/item_place_more"
+            android:layout_width="368dp"
+            android:layout_marginTop="8dp"
+            android:layout_height="60dp"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <include
+            android:id="@+id/il_no_other_place"
+            layout="@layout/item_no_other_place"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/il_top_menu"
+        layout="@layout/item_top_menu"
+        android:layout_width="315dp"
+        android:layout_height="72dp"
+        android:layout_gravity="top|center_horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/ll_datasource_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="78dp"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        tools:visibility="visible">
+
+        <TextView
+            style="@style/font_500"
+            android:id="@+id/tv_data_source_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="台中市烏日區"
+            android:letterSpacing="0.1"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_secondary"
+            android:textSize="24sp"/>
+
+        <ImageView
+            android:id="@+id/iv_edit_source"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_edit"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_coupon_list"
+        android:layout_width="680dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="102dp"
+        android:layout_marginStart="30dp"/>
+
+    <FrameLayout
+        android:id="@+id/fl_coupon_detail"
+        android:layout_width="720dp"
+        android:layout_height="512dp"
+        android:layout_marginTop="113dp"
+        android:layout_marginStart="17dp"/>
+
+    <FrameLayout
+        android:id="@+id/fl_voice_store_list"
+        android:layout_width="680dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="102dp"
+        android:layout_marginStart="30dp"/>
+
+    <FrameLayout
+        android:id="@+id/fl_place_list"
+        android:layout_width="720dp"
+        android:layout_height="512dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="35dp"
+        android:layout_marginEnd="31dp"/>
+
+    <FrameLayout
+        android:id="@+id/fl_attraction_coupon_detail"
+        android:layout_width="720dp"
+        android:layout_height="512dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="33dp"
+        android:layout_marginEnd="29dp"/>
+
+    <include
+        android:id="@+id/il_top_menu_content"
+        layout="@layout/item_top_menu_content"
+        android:layout_width="285dp"
+        android:layout_height="136dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="76dp"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <include
+        android:id="@+id/il_travel_state"
+        layout="@layout/item_travel_state"
+        android:layout_width="368dp"
+        android:layout_height="56dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"/>
+
+    <FrameLayout
+        android:id="@+id/fl_full_tab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/fl_new_coupon_notification"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/bg_notification"
+        android:layout_gravity="bottom|start"
+        android:layout_marginEnd="29dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            style="@style/font_500"
+            android:letterSpacing="0.1"
+            android:id="@+id/tv_new_coupon_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="提醒您，您收藏過的店家 “漢來美食”有新優惠，點按查看資訊。"
+            android:textSize="24sp"
+            android:textColor="@color/color_primary"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginStart="48dp"/>
+
+        <TextView
+            style="@style/font_500"
+            android:letterSpacing="0.15"
+            android:id="@+id/tv_check_new_coupon"
+            android:layout_width="88dp"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_round_c30f23"
+            android:textColor="@color/white"
+            android:text="@string/check"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginEnd="182dp"
+            android:layout_gravity="center_vertical|end"/>
+
+        <TextView
+            style="@style/font_500"
+            android:letterSpacing="0.15"
+            android:id="@+id/tv_cancel_new_coupon"
+            android:layout_width="88dp"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_round_000000"
+            android:textColor="@color/white"
+            android:text="@string/cancel"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginEnd="78dp"
+            android:layout_gravity="center_vertical|end"/>
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_touch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

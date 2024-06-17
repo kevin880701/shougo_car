@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="204dp"
+    android:layout_height="56dp"
+    android:background="@drawable/bg_start_route_bt"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_arrow_right_up_2"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="21dp"/>
+
+    <TextView
+        android:id="@+id/tv_start_route"
+        style="@style/font_500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_navigate"
+        android:letterSpacing="0.15"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginEnd="29dp"/>
+
+</FrameLayout>

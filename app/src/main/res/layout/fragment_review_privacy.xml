@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_background"
+    tools:context=".ui.tab.setting.ReviewPrivacyFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_privacy"
+        android:layout_width="560dp"
+        android:layout_height="492dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_setting_item">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="31dp"/>
+
+        <TextView
+            android:id="@+id/tv_privacy_title"
+            style="@style/font_500"
+            android:letterSpacing="0.08"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/privacy_statement"
+            android:textColor="@color/color_primary"
+            android:textSize="28sp"
+            app:layout_constraintTop_toTopOf="@id/iv_back"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back"
+            app:layout_constraintStart_toEndOf="@id/iv_back"
+            android:layout_marginStart="13dp"/>
+
+        <ScrollView
+            android:id="@+id/sv_privacy"
+            android:layout_width="0dp"
+            android:layout_height="380dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="23dp"
+            android:fadeScrollbars="false"
+            android:scrollbarStyle="outsideInset"
+            android:paddingRight="15dp"
+            android:verticalScrollbarPosition="right"
+            android:background="@drawable/bg_review_privacy"
+            android:scrollbarThumbVertical="@drawable/bg_sv_thumb"
+            android:scrollbarTrackVertical="@drawable/bg_sv_track">
+
+            <TextView
+                style="@style/font_400"
+                android:letterSpacing="0.08"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="#3e3a39"
+                android:padding="15dp"
+                android:text="隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私權條款隱私"/>
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

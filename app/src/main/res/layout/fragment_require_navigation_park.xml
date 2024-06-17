@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.tab.main.RequireNavigationParkFragment"
+    android:background="#E6000000">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="560dp"
+        android:layout_height="300dp"
+        android:background="@drawable/bg_round_12_efefef"
+        android:layout_gravity="center">
+
+        <TextView
+            style="@style/font_500"
+            android:letterSpacing="0.08"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="漢來美食"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            style="@style/font_400"
+            android:letterSpacing="0.08"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/this_place_has_parking_ad_to_travel"
+            android:textColor="@color/black"
+            android:textSize="29sp"
+            android:gravity="center_horizontal"/>
+
+        <include
+            android:id="@+id/il_button_no"
+            layout="@layout/item_button_no"
+            android:layout_width="124dp"
+            android:layout_height="56dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/il_button_yes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="31dp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:layout_marginEnd="18dp" />
+
+        <include
+            android:id="@+id/il_button_yes"
+            layout="@layout/item_button_yes"
+            android:layout_width="124dp"
+            android:layout_height="56dp"
+            app:layout_constraintStart_toEndOf="@id/il_button_no"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="31dp"/>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_close"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="24sp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

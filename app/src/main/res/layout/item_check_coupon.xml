@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="204dp"
+    android:layout_height="56dp"
+    android:background="@drawable/bg_round_c30f23"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="34dp"
+        android:layout_height="26dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/ic_coupon" />
+
+    <TextView
+        style="@style/font_500"
+        android:letterSpacing="0.15"
+        android:id="@+id/tv_check_coupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="13dp"
+        android:text="查看優惠"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+</LinearLayout>

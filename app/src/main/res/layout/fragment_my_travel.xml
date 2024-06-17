@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B3000000"
+    tools:context=".ui.tab.main.travel.MyTravelFragment">
+
+    <TextView
+        android:id="@+id/tv_note"
+        style="@style/font_400"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="146dp"
+        android:letterSpacing="0.08"
+        android:text="@string/rember_delete_place"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_travel"
+        android:layout_width="640dp"
+        android:layout_height="536dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="29dp"
+        android:background="@drawable/bg_round_12_efefef"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/ic_back_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_travel_name"
+            style="@style/font_500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="22dp"
+            android:letterSpacing="0.08"
+            android:text="@string/my_travel"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@id/iv_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_travel_desc"
+            style="@style/font_400"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.08"
+            android:text="@string/travel_waypoint"
+            android:textColor="@color/color_my_travel_subtitle"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/tv_travel_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_travel_name" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_travel_place"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/fl_bottom_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_travel_desc"
+            tools:listitem="@layout/listitem_waypoint" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:background="@drawable/drawable_travel_shadow"
+            app:layout_constraintBottom_toTopOf="@id/fl_bottom_button"
+            app:layout_constraintEnd_toEndOf="@id/fl_bottom_button"
+            app:layout_constraintStart_toStartOf="@id/fl_bottom_button" />
+
+        <FrameLayout
+            android:id="@+id/fl_bottom_button"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <FrameLayout
+                android:id="@+id/fl_add_favorite_travel"
+                android:layout_width="204dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="105dp"
+                android:background="@drawable/bg_round_c30f23"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/ic_heart" />
+
+                <TextView
+                    style="@style/font_500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="27dp"
+                    android:letterSpacing="0.15"
+                    android:text="@string/favorite_travel"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+            <include
+                android:id="@+id/il_start_route"
+                layout="@layout/item_start_route"
+                android:layout_width="204dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="325dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/il_travel_state"
+        layout="@layout/item_travel_state_white"
+        android:layout_width="368dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_naming_travel"
+        android:layout_width="640dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bg_round_12_ffffff"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_travel_state">
+
+        <ImageView
+            android:id="@+id/iv_naming_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/ic_back_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/font_500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:letterSpacing="0.08"
+            android:text="@string/naming_travel"
+            android:textColor="@color/color_my_travel_title"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_naming_back"
+            app:layout_constraintStart_toEndOf="@id/iv_naming_back"
+            app:layout_constraintTop_toTopOf="@id/iv_naming_back" />
+
+        <FrameLayout
+            android:id="@+id/fl_travel_name"
+            android:layout_width="448dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginBottom="54dp"
+            android:background="@drawable/bg_round_000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <EditText
+                android:id="@+id/et_travel_name"
+                style="@style/font_400"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@android:color/transparent"
+                android:hint="@string/input_name"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:letterSpacing="0.08"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@drawable/drawable_cursor"
+                android:textSize="20sp"
+                tools:text="我的台中旅程" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_confirm_name"
+            style="@style/font_500"
+            android:layout_width="112dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_round_c30f23"
+            android:gravity="center"
+            android:letterSpacing="0.15"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@id/fl_travel_name"
+            app:layout_constraintStart_toEndOf="@id/fl_travel_name"
+            app:layout_constraintTop_toTopOf="@id/fl_travel_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
